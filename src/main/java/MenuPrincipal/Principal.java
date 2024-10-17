@@ -4,6 +4,11 @@
  */
 package MenuPrincipal;
 
+import ControldeExistencias.ControlExistenciasMenu;
+import GestionProductos.Gestionproductos;
+import InformesyEstadísticas.MenúInformeyEstaditica;
+import PedidosDeCompra.MenuPedidosdeCompra;
+
 /**
  *
  * @author Bienc
@@ -27,38 +32,40 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        GestionProducto = new javax.swing.JButton();
+        ControlExistencias = new javax.swing.JButton();
+        PedidosCompra = new javax.swing.JButton();
+        InformesyEstadisticas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("MENÚ PRINCIPAL");
 
-        jButton1.setText("Gestion de Productos");
-
-        jButton2.setText("Control de Existencias");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        GestionProducto.setText("Gestion de Productos");
+        GestionProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                GestionProductoActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Pedidos de compra");
-
-        jButton4.setText("Informes y Estadisticas");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ControlExistencias.setText("Control de Existencias");
+        ControlExistencias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ControlExistenciasActionPerformed(evt);
             }
         });
 
-        jTextField1.setText("Bienveido (nombre de usuario)");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        PedidosCompra.setText("Pedidos de compra");
+        PedidosCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                PedidosCompraActionPerformed(evt);
+            }
+        });
+
+        InformesyEstadisticas.setText("Informes y Estadisticas");
+        InformesyEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InformesyEstadisticasActionPerformed(evt);
             }
         });
 
@@ -71,53 +78,67 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(150, 150, 150))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PedidosCompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GestionProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ControlExistencias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(InformesyEstadisticas, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(74, 74, 74)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(ControlExistencias)
+                    .addComponent(GestionProducto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(PedidosCompra)
+                    .addComponent(InformesyEstadisticas))
                 .addContainerGap(368, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void ControlExistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ControlExistenciasActionPerformed
+    ControlExistenciasMenu newframe = new ControlExistenciasMenu ();    
+   newframe.setVisible(true);
+     
+this.dispose();
+    }//GEN-LAST:event_ControlExistenciasActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void InformesyEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformesyEstadisticasActionPerformed
+    MenúInformeyEstaditica newframe = new MenúInformeyEstaditica();    
+   newframe.setVisible(true);
+     
+this.dispose();
+    }//GEN-LAST:event_InformesyEstadisticasActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void GestionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GestionProductoActionPerformed
+        
+     Gestionproductos newframe = new Gestionproductos();    
+   newframe.setVisible(true);
+     
+this.dispose();
+        
+        
+        
+        
+    }//GEN-LAST:event_GestionProductoActionPerformed
+
+    private void PedidosCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PedidosCompraActionPerformed
+    MenuPedidosdeCompra  newframe = new MenuPedidosdeCompra ();    
+   newframe.setVisible(true);
+     
+this.dispose();
+    }//GEN-LAST:event_PedidosCompraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,11 +176,10 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton ControlExistencias;
+    private javax.swing.JButton GestionProducto;
+    private javax.swing.JButton InformesyEstadisticas;
+    private javax.swing.JButton PedidosCompra;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

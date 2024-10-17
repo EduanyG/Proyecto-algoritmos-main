@@ -101,7 +101,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Producto"/>
+        <Property name="text" type="java.lang.String" value="Producto:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">

@@ -47,7 +47,7 @@ public class PedidosProductos extends javax.swing.JFrame {
 
         jLabel5.setText("Estado:");
 
-        jLabel6.setText("Producto");
+        jLabel6.setText("Producto:");
 
         jButton2.setText("Filtrar");
 
